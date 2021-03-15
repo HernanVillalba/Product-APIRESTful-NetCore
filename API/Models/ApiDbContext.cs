@@ -10,8 +10,8 @@ namespace API.Models
     {
         public ApiDbContext()
         {
-        }
 
+        }
         public ApiDbContext(DbContextOptions<ApiDbContext> options)
             : base(options)
         {
