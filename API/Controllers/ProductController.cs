@@ -21,7 +21,7 @@ namespace API.Controllers
 
         //GET api/Product
         [HttpGet]
-        public async Task<IEnumerable<Product>> Get()
+        public async Task<IEnumerable<Product>> GetAll()
         {
             return await _apiDbContext.Products.ToListAsync();
         }
@@ -29,7 +29,7 @@ namespace API.Controllers
         //muestra registro por id
         //GET api/Product/1
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get(int? id)
+        public async Task<IActionResult> GetById(int? id)
         {
             if (id != null && id > 0)
             {
